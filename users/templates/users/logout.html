@@ -1,0 +1,7 @@
+{% extends "tasks/layout.html" %}
+{% block body %}
+    <form action="{% url 'users:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+{% endblock %}

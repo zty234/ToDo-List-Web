@@ -1,0 +1,15 @@
+{% extends "tasks/layout.html" %}
+{% block body %}
+    {% if messsages %}
+        {% for message in messages %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+    <h1>Register</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!--auto form input for username email and password-->
+        <button type="submit">Register</button>
+        <a href="{% url 'users:welcome' %}" class="btn btn-secondary">Back</a>
+    </form>
+{% endblock %}

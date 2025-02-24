@@ -1,0 +1,17 @@
+{% extends "tasks/layout.html" %}
+{% block body %}
+    {% if messages %}
+    <div class="alert alert-danger">
+
+        <p>{{ message }}</p>
+
+    </div>
+    {% endif %}
+    <form action="{% url 'users:login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+        <a href="{% url 'users:welcome' %}" class="btn btn-secondary">Back</a>
+    </form>
+{% endblock %}

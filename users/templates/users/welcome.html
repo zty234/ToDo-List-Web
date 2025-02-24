@@ -1,0 +1,16 @@
+<!-- users/welcome.html -->
+
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h1>Welcome to the To-Do List App!</h1>
+        <p>Get started by registering or logging in.</p>
+
+        <!-- Navigation links -->
+        <div>
+            <a href="{% url 'users:register' %}" class="btn btn-primary">Register</a>
+            <a href="{% url 'users:login' %}" class="btn btn-secondary">Login</a>
+        </div>
+    </div>
+{% endblock %}
