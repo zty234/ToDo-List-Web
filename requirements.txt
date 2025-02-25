@@ -90,7 +90,7 @@ diff-match-patch @ file:///Users/ktietz/demo/mc3/conda-bld/diff-match-patch_1630
 dill @ file:///C:/b/abs_f79eg27d2q/croot/dill_1715094735295/work
 distributed @ file:///C:/b/abs_52ju83vjqr/croot/distributed_1725523030746/work
 distro @ file:///C:/b/abs_71xr36ua5r/croot/distro_1714488282676/work
-Django==5.1.6
+Django==5.0.2
 docstring-to-markdown @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/docstring-to-markdown_1699484265167/work
 docutils @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/docutils_1699474820579/work
 et-xmlfile @ file:///C:/Users/dev-admin/perseverance-python-buildout/croot/et_xmlfile_1699500373144/work
