@@ -23,8 +23,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-t$(io25-9033m$c0$8^j^o0lp%^*!ljmujeuk3a5y#gdl9t*a@"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+#DEBUG = True
+DEBUG = False
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['todolist-f5ie.onrender.com', 'localhost', '127.0.0.1']
 
@@ -138,3 +138,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+
+# Media files (if you have any)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
