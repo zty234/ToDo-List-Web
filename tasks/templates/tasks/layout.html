@@ -3,31 +3,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--auto suit for smaller screen-->
+        <meta name="viewport" content="width=device-width, initial scale=1.0"> <!--auto suit for smaller screen-->
 
         <title>To-do List</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     </head>
     <body>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <!--navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">  <!--light navbar and bg-->
             <div class="container">
                 <a class="navbar-brand" href="{% url 'users:welcome' %}">Welcome</a>
-
-                <!-- Bootstrap 5 需要使用 `data-bs-toggle` 和 `data-bs-target` -->
-                <button class="navbar-toggler" type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#navbarNav" 
-                        aria-controls="navbarNav" 
-                        aria-expanded="false" 
-                        aria-label="Toggle navigation">
+                <!--Make navbar like a humburger, could be expand-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">  <!-- Bootstrap 5: `ml-auto` 改成 `ms-auto` -->
+                    <ul class="navbar-nav ml-auto">
                         {% if user.is_authenticated %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'tasks:add' %}">Add Task</a>
@@ -53,8 +45,20 @@
             {% endblock %}
         </div>
 
-        <!-- Bootstrap JS -->
-        <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <!--bootstrap js, can only be activated on smaller screen-->
+        <script src="{% static 'bootstrap/bootstrap.bundle.js' %}"></script>
 
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let navbarToggler = document.querySelector(".navbar-toggler");
+              let navbarCollapse = document.querySelector("#navbarNav");
+          
+              navbarToggler.addEventListener("click", function () {
+                navbarCollapse.classList.toggle("show");
+              });
+            });
+          </script>
+          
     </body>
 </html>
